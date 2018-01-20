@@ -1,0 +1,19 @@
+spring:
+  session:
+    #设置session的保存方式
+    store-type: REDIS
+  redis:
+    host: 192.168.1.200
+    port: 6379
+    database: 10
+    pool:
+      max-active: 8
+      max-idle: 8
+      max-wait: -1
+      min-idle: 0
+#自定义cookie的作用域
+custom:
+  cookie:
+    domain: demo.com
+    name: sessionId
+    path: /
